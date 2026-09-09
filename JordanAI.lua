@@ -3313,10 +3313,10 @@ local function handleChatCommand(fromPlayer, message)
     end
 
     if commandWord == "cmds" then
-        speakInGameChat(fromPlayer.Name .. ", commands: " .. listCommandsFor(fromPlayer.UserId))
+        speakInGameChat(fromPlayer.Name .. ", commands: !models | !provider <name> | !model <alias>")
         return
     end
-
+    
     if commandWord == "models" then
         local providerModels = PROVIDERS[settings.provider].models
         local aliasList = {}
